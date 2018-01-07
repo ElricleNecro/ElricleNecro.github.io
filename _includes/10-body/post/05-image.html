@@ -1,0 +1,20 @@
+<a href="{{ include.source-url }}"
+  rel="nofollow"
+  class="post-image">
+  {% if include.size == "large" %}
+    <div class="post-image-large visible-lg-block">
+      <img src="{{include.image-url}}"/>
+    </div>
+  {% endif %}
+  <div class="post-image-small thumbnail
+    {% if include.size == "large" %}
+      hidden-lg
+    {% endif %}">
+    <img class="img-responsive"
+      src="{{ include.image-url }}"
+      alt="{{ include.image-alt }}"/>
+    <div class="caption text-center">
+      <small>Crédit : {{ include.credit }}</small>
+    </div>
+  </div>
+</a>
